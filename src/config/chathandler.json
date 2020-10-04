@@ -1,0 +1,16 @@
+{
+  "options": {
+    "maxwarnings": 5
+  },
+  "badwords": [
+    "cancer",
+    "aids",
+    "nigger",
+    "asshole",
+    "bitch"
+  ],
+  "messages" : {
+    "message-removed": "Your message has been removed for containing a badword!",
+    "badword-detected": "Please watch your language %user%"
+  }
+}

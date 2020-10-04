@@ -2,7 +2,7 @@ import {Client, Message} from "discord.js";
 import Skynet from "../skynet";
 import ChatUtils from "../Utilities/chatutils";
 
-//
+//The about command.
 export default class About
 {
     private Client : Client
