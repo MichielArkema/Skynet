@@ -1,0 +1,11 @@
+{
+    "options": {
+        "COMMAND_MODIFIER": "?"
+    },
+    "messages": {
+        "warning": {
+            "COMMAND_NOT_ALLOWED": "You don't have the permissions to execute this command!",
+            "BOT_CHANNEL_ONLY": "Bot commands can only be executed inside the \"bot-commands\" channel!!!!!!"
+        }
+    }
+}
