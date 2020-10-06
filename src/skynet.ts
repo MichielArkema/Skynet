@@ -2,6 +2,7 @@ import Discord from "discord.js";
 import {BOT_TOKEN} from "./credentials";
 import About from "./Plugins/about";
 import ChatHandler from "./Plugins/chathandler"
+import WarningSystem from "./Plugins/warningsystem";
 
 /*
    This is the bootstrapper and the main component of the discord bot.
@@ -11,6 +12,7 @@ export default class Skynet {
     private static _instance: Skynet
 
     //Fields
+
     public Client:Discord.Client
 
     //Plugin instances.
@@ -20,6 +22,9 @@ export default class Skynet {
     // @ts-ignore
     public About : About
 
+    // @ts-ignore
+    public WarningSystem : WarningSystem
+
     public static getInstance() : Skynet {
         if(this._instance == null)
             this._instance = new Skynet();
@@ -27,9 +32,12 @@ export default class Skynet {
     }
 
     public start() :void {
-        this.Client.login(BOT_TOKEN);
+        this.Client.login(BOT_TOKEN).then((msg) => {
+            console.log("Response: " + msg);
+        });
         this.Chathandler = new ChatHandler();
         this.About = new About();
+        this.WarningSystem = new WarningSystem();
     }
 
 

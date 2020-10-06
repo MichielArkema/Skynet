@@ -24,10 +24,6 @@ export default class DataUtils
         if(!name || !data)
             return;
         const file_path = path.join("../data", name);
-        if(!fs.existsSync(file_path)){
-            //Let's create the file if it doesn't exists.
-            fs.writeFileSync(file_path, "");
-        }
 
         const contents = JSON.stringify(data);
         fs.writeFileSync(file_path, contents);
